@@ -1,0 +1,22 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <form #form="ngForm" (ngSubmit)="onFormSubmit(form)">
+            <h1 class="title">
+                Adicionar ponto turístico
+            </h1>
+
+            <input ngModel #tripTitleInput="ngModel" class="input has-background-light is-medium" required minlength="5" name="title" type="text" placeholder="Adicione o ponto turístico...">
+            <br><br>
+
+            <div class="buttons is-right">
+                <button class="button is-medium" routerLink="/">Cancelar</button>
+                <button type="submit" class="button is-primary has-text-white is-medium">Criar</button>
+            </div>
+
+            <div *ngIf="tripTitleInput.invalid && showValidationErrors" class="alert alert-danger">
+                <p class="help is-danger" *ngIf="tripTitleInput.errors.required">Escreva seu ponto turístico!</p>
+                <p class="help is-danger" *ngIf="tripTitleInput.errors.minlength">O local deve ter no mínimo 5 caracteres!</p>
+            </div>
+        </form>
+    </div>
+</div>

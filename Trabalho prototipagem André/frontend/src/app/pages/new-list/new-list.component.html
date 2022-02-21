@@ -1,0 +1,31 @@
+<div class="centered-content">
+    <div class="modal-box">
+        <h1 class="title">
+            Adicione uma nova cidade
+        </h1>
+        <div class="field has-addons">
+            <div class="control is-expanded">
+                <div class="select is-fullwidth">
+                    <select #listTitleInput name="city" placeholder="Enter list name">
+                        <option value="Florianópolis">Florianópolis</option>
+                        <option value="Blumenau">Blumenau</option>
+                        <option value="Porto Alegre">Porto Alegre</option>
+                        <option value="Curitiba">Curitiba</option>
+                        <option value="Rio de Janeiro">Rio de Janeiro</option>
+                        <option value="Criciuma">Criciuma</option>
+                        <option value="Serafina Corrêa">Serafina Corrêa</option>
+                        <option value="Joinville">Joinville</option>
+                        <option value="Maceió">Maceió</option>
+                        <option value="Campos do jordão">Campos do jordão</option>
+                        <option value="Petrópolis">Petrópolis</option>
+                        <option value="Bento Gonçalves">Bento Gonçalves</option>
+                        </select>
+                </div>
+            </div>
+            <div class="control">
+                <button type="submit" class="button is-primary" (click)="createList(listTitleInput.value)">Escolher</button>
+                <button routerLink="/" class="button" style="margin-top:100px; margin-left: 10px;">Voltar</button>
+            </div>
+        </div>
+    </div>
+</div>
